@@ -1,0 +1,111 @@
+.upload-container {
+  width: 100%; /* Changed from max-width: 500px */
+  background: #ffffff;
+  padding: 0; /* Remove padding since the sidebar provides it */
+  box-shadow: none; /* Strip shadow so it integrates clean inside panel flat */
+}
+
+.section-title {
+  margin: 0 0 16px 0;
+  color: #1e293b;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Custom Styled File Input Card */
+.file-drop-zone {
+  display: block;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background: #f8fafc;
+}
+
+.file-drop-zone:hover {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.file-drop-zone.file-selected {
+  border-color: #10b981;
+  background: #ecfdf5;
+  border-style: solid;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.drop-zone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.drop-zone-content .icon {
+  font-size: 2rem;
+}
+
+.drop-zone-content .text {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.drop-zone-content .filename {
+  color: #065f46;
+  font-weight: 500;
+}
+
+/* Button Layout Configuration */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+
+.btn-primary:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+}

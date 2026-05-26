@@ -1,0 +1,34 @@
+/* Zero out default browser body paddings */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f1f5f9;
+}
+
+.app-dashboard-wrapper {
+  display: flex;
+  height: 100vh; /* Fills exactly 100% of the screen height */
+  width: 100vw;  /* Fills exactly 100% of the screen width */
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Sidebar configuration grid */
+.sidebar-panel {
+  width: 380px; /* Locked width for configuration utilities */
+  background-color: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Main interaction container grid */
+.content-panel {
+  flex: 1; /* Automatically stretches to take up all remaining space */
+  background-color: #f8fafc;
+  padding: 24px;
+  box-sizing: border-box;
+  justify-content: center; /* Center the panel content if preferred */
+}

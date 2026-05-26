@@ -1,0 +1,27 @@
+
+<h2>Upload Medical Document</h2>
+
+<div class="upload-container">
+  <h3 class="section-title">Document Management</h3>
+  
+  <!-- Modern File Drop Zone -->
+  <label class="file-drop-zone" [class.file-selected]="selectedFile">
+    <input type="file" (change)="onFileSelected($event)" class="hidden-input" accept=".pdf,.txt,.doc,.docx" />
+    <div class="drop-zone-content">
+      <span class="icon">📁</span>
+      <span class="text" *ngIf="!selectedFile">Click or drag file here to upload context</span>
+      <span class="text filename" *ngIf="selectedFile">{{ selectedFile.name }}</span>
+    </div>
+  </label>
+
+  <!-- Control Actions Grid -->
+  <div class="action-buttons">
+    <button class="btn btn-primary" [disabled]="!selectedFile" (click)="upload()">
+      <span>📤</span> Upload File
+    </button>
+    
+    <button class="btn btn-danger" (click)="clearDatabaseContext()">
+      <span>🗑️</span> Clear Database Context
+    </button>
+  </div>
+</div>
